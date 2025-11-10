@@ -1,0 +1,6 @@
+<?page title="Auto Generated index.zul"?>
+<window title="OTP" border="normal" width="200px" style="margin: 0px auto;" apply="com.fintrust.controller.ForgetPasswordController">
+
+<button id = "sendOTP" label = "forget"></button>
+
+</window>
