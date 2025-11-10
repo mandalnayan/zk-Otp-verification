@@ -2,10 +2,10 @@
 <zk>
 <window title="Email OTP Login"
         apply="org.zkoss.bind.BindComposer"
-        viewModel="@id('vm') @init('com.myapp.viewmodel.OtpViewModel')"
+        viewModel="@id('vm') @init('com.fintrust.viewModel.OtpViewModel')"
         border="normal"
         width="300px">
-    <vlayout spacing="10px" style="margin:10px">
+    <vlayout spacing="10px" style="margin:10px auto">
 
         <label value="Enter your email:"/>
         <textbox value="@bind(vm.email)" placeholder="your@example.com"/>

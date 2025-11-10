@@ -13,12 +13,16 @@ public class OtpViewModel {
     private String otpCode;
     private String statusMessage;
     private final OtpService otpService;
+    private final String adminEmail = "nayanm417@gmail.com";
+    private final String password = "zxrhrgrielkhqxml";
 
     public OtpViewModel() {
         // Initialize manually (since no Spring)
+        
         var repo = new com.fintrust.repository.OtpRepository();
         var mailSender = new com.fintrust.service.MailSenderWrapper(
-                "smtp.example.com", "587", "user@example.com", "password");
+            "smtp.gmail.com", "587", adminEmail, password);
+
         otpService = new OtpService(mailSender, repo);
     }
 
@@ -51,7 +55,7 @@ public class OtpViewModel {
     public void verifyOtp() {
         if (otpService.verifyOtp(email, otpCode)) {
             statusMessage = "Verification successful!";
-            Executions.sendRedirect("/home.zul"); // redirect after success
+            Executions.sendRedirect("/index.zul"); // redirect after success
         } else {
             statusMessage = "Invalid or expired OTP";
         }

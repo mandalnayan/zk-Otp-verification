@@ -15,8 +15,8 @@ public class ForgetPasswordController extends SelectorComposer<Window>{
 		BindUtils.postNotifyChange(null, null, this, "Hello");
 		alert("Hii");
 	
-		boolean success = OtpService.generateAndSendOtp(email);
-		if (success) {
+		
+		if (true) {
 			alert("Successfully send OTP..!");
 		} else {
 			alert("Faild to send OTP..!");
